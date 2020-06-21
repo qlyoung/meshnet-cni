@@ -14,7 +14,7 @@ kust-ensure:
 .PHONY: kustomize
 kustomize: kust-ensure 
 	@cd manifests/base/ && $(GOPATH)/kustomize edit set image $(DOCKERID)/meshnet:$(VERSION)
-	kubectl apply -k manifests/base/
+	kubectl apply --kubeconfig /etc/rancher/k3s/k3s.yaml -k manifests/base/
 
 .PHONY: kustomize-kops
 kustomize-kops: kust-ensure 

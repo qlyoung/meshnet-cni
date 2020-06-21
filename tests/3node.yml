@@ -66,7 +66,7 @@ items:
     containers: 
     - image: alpine
       name: pod
-      command:  ["/bin/sh", "-c", "sleep 2000000000000"]
+      command:  ["/bin/sh", "-c", "sleep 20000000"]
 - apiVersion: v1
   kind: Pod
   metadata:
@@ -77,7 +77,7 @@ items:
     containers: 
     - image: alpine
       name: pod
-      command:  ["/bin/sh", "-c", "sleep 2000000000000"]
+      command:  ["/bin/sh", "-c", "sleep 20000000"]
 - apiVersion: v1
   kind: Pod
   metadata:
@@ -88,4 +88,4 @@ items:
     containers: 
     - image: alpine
       name: pod
-      command:  ["/bin/sh", "-c", "sleep 2000000000000"]
+      command:  ["/bin/sh", "-c", "sleep 20000000"]

@@ -1,8 +1,8 @@
 FROM golang:1.12.7 AS proto_base
 ENV GO111MODULE=off
 RUN apt-get update && apt-get -y install curl unzip
-RUN curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v3.9.1/protoc-3.9.1-linux-x86_64.zip && \
-    unzip protoc-3.9.1-linux-x86_64.zip
+RUN curl -LO https://github.com/asteris-llc/protocol-buffers-arm/releases/download/3.1.0-binary-1/protoc-3.1.0-linux-arm.zip && \
+    unzip protoc-3.1.0-linux-arm.zip && cp lib/*.so.11 /lib
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 COPY daemon/ daemon/
 COPY Makefile .

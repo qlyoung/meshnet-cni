@@ -5,5 +5,7 @@ commonLabels:
 images:
 - name: networkop/meshnet
   newTag: latest
+- name: qlyoung/meshnet:armhf
+  newTag: latest
 resources:
 - meshnet.yml
